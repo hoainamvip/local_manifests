@@ -14,25 +14,49 @@ Local manifest for building Android 17 (Evolution X) for the **Xiaomi 12S Pro (u
 
 ## Usage
 
-From the root of your ROM source:
+Run everything from the root of your ROM source.
+
+1. Clone this repo as your local manifests:
 
 ```bash
-git clone https://github.com/<user>/local_manifests .repo/local_manifests
+git clone https://github.com/hoainamvip/local_manifests .repo/local_manifests
+```
+
+2. Sync the source:
+
+```bash
 repo sync -c --no-tags --force-sync -j8
 ```
 
-Then build:
+3. Set up the build environment:
 
 ```bash
 source build/envsetup.sh
+```
+
+4. Pick the device:
+
+```bash
 breakfast unicorn
+```
+
+5. Build:
+
+```bash
 m evolution
 ```
 
-To update later:
+## Updating
+
+1. Pull the latest manifest:
 
 ```bash
 git -C .repo/local_manifests pull
+```
+
+2. Sync again:
+
+```bash
 repo sync -c --no-tags --force-sync -j8
 ```
 
