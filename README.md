@@ -67,7 +67,7 @@ git -C .repo/local_manifests pull
 **2. Sync again**
 
 ```bash
-repo sync -c --no-tags --force-sync -j8
+repo sync -c --no-tags --force-sync -j$(nproc --all)
 ```
 
 ## Notes
