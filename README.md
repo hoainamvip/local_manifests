@@ -31,7 +31,7 @@ git clone https://github.com/hoainamvip/local_manifests .repo/local_manifests
 **3. Sync the source**
 
 ```bash
-repo sync -c --no-tags --force-sync -j$(nproc --all) 2>&1 | tee sync_log.txt
+repo sync -c --no-tags --force-sync -j$(nproc --all)
 
 ```
 
