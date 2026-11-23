@@ -19,7 +19,7 @@ Run everything from the root of your PixelOS source, synced from the [PixelOS ma
 **1. Init the PixelOS source (skip if already done)**
 
 ```bash
-repo init -u https://github.com/PixelOS-AOSP/android_manifest -b seventeen
+repo init -u https://github.com/PixelOS-AOSP/android_manifest -b seventeen --git-lfs
 ```
 
 **2. Clone this repo as your local manifests**
@@ -32,7 +32,6 @@ git clone https://github.com/hoainamvip/local_manifests .repo/local_manifests
 
 ```bash
 repo sync -c --no-tags --force-sync -j$(nproc --all)
-
 ```
 
 **4. Replace lineage_unicorn with custom_unicorn**
@@ -55,6 +54,20 @@ breakfast unicorn
 
 ```bash
 m pixelos
+```
+
+## Updating
+
+**1. Pull the latest manifest**
+
+```bash
+git -C .repo/local_manifests pull
+```
+
+**2. Sync again**
+
+```bash
+repo sync -c --no-tags --force-sync -j8
 ```
 
 ## Notes
