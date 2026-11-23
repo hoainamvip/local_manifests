@@ -1,4 +1,3 @@
-
 # local_manifests
 
 Local manifest for building **PixelOS** (Android 17) for the **Xiaomi 12S Pro (unicorn, sm8450)** with the **6.6 kernel** from cupid-development.
@@ -35,47 +34,15 @@ git clone https://github.com/hoainamvip/local_manifests .repo/local_manifests
 repo sync -c --no-tags --force-sync -j8
 ```
 
-**4. Set up the build environment**
+**4. Replace lineage_unicorn with custom_unicorn**
+
+The unicorn device tree ships as `lineage_unicorn`. For PixelOS, rename it to `custom_unicorn`.
+
+**5. Set up the build environment**
 
 ```bash
 source build/envsetup.sh
 ```
-
-**5. Replace lineage_unicorn with custom_unicorn**
-
-The unicorn device tree ships as `lineage_unicorn`. For PixelOS, rename it to `custom_unicorn`.
-
-Go to the device tree:
-
-```bash
-cd device/xiaomi/unicorn
-```
-
-Rename the product makefile:
-
-```bash
-mv lineage_unicorn.mk custom_unicorn.mk
-```
-
-Replace the product name:
-
-```bash
-sed -i 's/lineage_unicorn/custom_unicorn/g' custom_unicorn.mk AndroidProducts.mk
-```
-
-Inherit the PixelOS common config instead of Lineage:
-
-```bash
-sed -i 's#vendor/lineage/config/common_full_phone.mk#vendor/custom/config/common_full_phone.mk#' custom_unicorn.mk
-```
-
-Go back to the source root:
-
-```bash
-cd ../../..
-```
-
-`repo sync` resets the device tree, so repeat this step after every sync.
 
 **6. Pick the device**
 
