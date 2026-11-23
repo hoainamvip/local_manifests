@@ -1,6 +1,7 @@
+
 # local_manifests
 
-Local manifest for building Android 17 (Evolution X) for the **Xiaomi 12S Pro (unicorn, sm8450)** with the **6.6 kernel** from cupid-development.
+Local manifest for building **PixelOS** (Android 17) for the **Xiaomi 12S Pro (unicorn, sm8450)** with the **6.6 kernel** from cupid-development.
 
 ## What's inside
 
@@ -14,60 +15,89 @@ Local manifest for building Android 17 (Evolution X) for the **Xiaomi 12S Pro (u
 
 ## Usage
 
-Run everything from the root of your ROM source.
+Run everything from the root of your PixelOS source, synced from the [PixelOS manifest](https://github.com/PixelOS-AOSP/android_manifest) (branch `seventeen`).
 
-1. Clone this repo as your local manifests:
+**1. Init the PixelOS source (skip if already done)**
+
+```bash
+repo init -u https://github.com/PixelOS-AOSP/android_manifest -b seventeen
+```
+
+**2. Clone this repo as your local manifests**
 
 ```bash
 git clone https://github.com/hoainamvip/local_manifests .repo/local_manifests
 ```
 
-2. Sync the source:
+**3. Sync the source**
 
 ```bash
 repo sync -c --no-tags --force-sync -j8
 ```
 
-3. Set up the build environment:
+**4. Set up the build environment**
 
 ```bash
 source build/envsetup.sh
 ```
 
-4. Pick the device:
+**5. Replace lineage_unicorn with custom_unicorn**
+
+The unicorn device tree ships as `lineage_unicorn`. For PixelOS, rename it to `custom_unicorn`.
+
+Go to the device tree:
+
+```bash
+cd device/xiaomi/unicorn
+```
+
+Rename the product makefile:
+
+```bash
+mv lineage_unicorn.mk custom_unicorn.mk
+```
+
+Replace the product name:
+
+```bash
+sed -i 's/lineage_unicorn/custom_unicorn/g' custom_unicorn.mk AndroidProducts.mk
+```
+
+Inherit the PixelOS common config instead of Lineage:
+
+```bash
+sed -i 's#vendor/lineage/config/common_full_phone.mk#vendor/custom/config/common_full_phone.mk#' custom_unicorn.mk
+```
+
+Go back to the source root:
+
+```bash
+cd ../../..
+```
+
+`repo sync` resets the device tree, so repeat this step after every sync.
+
+**6. Pick the device**
 
 ```bash
 breakfast unicorn
 ```
 
-5. Build:
+**7. Build**
 
 ```bash
-m evolution
-```
-
-## Updating
-
-1. Pull the latest manifest:
-
-```bash
-git -C .repo/local_manifests pull
-```
-
-2. Sync again:
-
-```bash
-repo sync -c --no-tags --force-sync -j8
+m pixelos
 ```
 
 ## Notes
 
-- The manifest includes `manifests/snippets/kernel-6.6.xml`, which must exist in your ROM manifest.
+- The manifest includes `manifests/snippets/kernel-6.6.xml`, which must exist in your PixelOS manifest.
 - Do not declare the same project paths in another local manifest.
 - Dolby: make sure the device tree inherits `hardware/dolby/dolby.mk` and that `DEVICE_MANIFEST_FILE` and `DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE` only use `+=`.
 
 ## Credits
 
+- [PixelOS-AOSP](https://github.com/PixelOS-AOSP)
 - [cupid-development](https://github.com/cupid-development)
 - [LineageOS](https://github.com/LineageOS)
 - [Evolution-X-Devices](https://github.com/Evolution-X-Devices)
