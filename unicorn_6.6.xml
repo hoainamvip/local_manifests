@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="cupid" fetch="https://github.com/cupid-development" />
-  <remote name="lineageos" fetch="https://github.com/LineageOS" />
-  <remote name="evoxdev" fetch="https://github.com/Evolution-X-Devices" />
+  <remote name="lm-cupid" fetch="https://github.com/cupid-development" />
+  <remote name="lm-lineageos" fetch="https://github.com/LineageOS" />
+  <remote name="lm-evox" fetch="https://github.com/Evolution-X-Devices" />
 
   <include name="manifests/snippets/kernel-6.6.xml" />
 
-  <project name="android_kernel_xiaomi_sm8450-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-kernel" remote="cupid" revision="lineage-24.0-6.6" />
-  <project name="android_kernel_xiaomi_sm8450-devicetrees-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-devicetrees" remote="cupid" revision="lineage-24.0-6.6" />
-  <project name="android_kernel_xiaomi_sm8450-modules-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-modules" remote="cupid" revision="lineage-24.0-6.6" />
-  <project name="android_kernel_xiaomi_sm8450-build-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-build" remote="cupid" revision="lineage-24.0-6.6" />
+  <project name="android_kernel_xiaomi_sm8450-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-kernel" remote="lm-cupid" revision="lineage-24.0-6.6" />
+  <project name="android_kernel_xiaomi_sm8450-devicetrees-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-devicetrees" remote="lm-cupid" revision="lineage-24.0-6.6" />
+  <project name="android_kernel_xiaomi_sm8450-modules-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-modules" remote="lm-cupid" revision="lineage-24.0-6.6" />
+  <project name="android_kernel_xiaomi_sm8450-build-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-build" remote="lm-cupid" revision="lineage-24.0-6.6" />
 
   <remove-project optional="true" path="device/xiaomi/sm8450-common" />
-  <project name="android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="cupid" revision="lineage-24.0-6.6" />
+  <project name="android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="lm-cupid" revision="lineage-24.0-6.6" />
   <remove-project optional="true" path="device/xiaomi/unicorn" />
-  <project name="android_device_xiaomi_unicorn" path="device/xiaomi/unicorn" remote="cupid" revision="lineage-24.0-6.6" />
+  <project name="android_device_xiaomi_unicorn" path="device/xiaomi/unicorn" remote="lm-cupid" revision="lineage-24.0-6.6" />
   <remove-project optional="true" path="vendor/xiaomi/sm8450-common" />
-  <project name="proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="cupid" revision="lineage-24.0-6.6" />
+  <project name="proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="lm-cupid" revision="lineage-24.0-6.6" />
   <remove-project optional="true" path="vendor/xiaomi/unicorn" />
-  <project name="proprietary_vendor_xiaomi_unicorn" path="vendor/xiaomi/unicorn" remote="cupid" revision="lineage-24.0-6.6" />
+  <project name="proprietary_vendor_xiaomi_unicorn" path="vendor/xiaomi/unicorn" remote="lm-cupid" revision="lineage-24.0-6.6" />
 
   <remove-project optional="true" path="hardware/qcom-caf/sm8450-6.6/display/hal" />
-  <project name="android_hardware_qcom_display" path="hardware/qcom-caf/sm8450-6.6/display/hal" remote="cupid" revision="lineage-24.0-caf-sm8450-6.6" />
+  <project name="android_hardware_qcom_display" path="hardware/qcom-caf/sm8450-6.6/display/hal" remote="lm-cupid" revision="lineage-24.0-caf-sm8450-6.6" />
   <remove-project optional="true" path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" />
-  <project name="android_hardware_qcom_audio-ar" path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" remote="cupid" revision="lineage-24.0-6.6" />
+  <project name="android_hardware_qcom_audio-ar" path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" remote="lm-cupid" revision="lineage-24.0-6.6" />
 
   <remove-project optional="true" path="hardware/xiaomi" />
-  <project name="android_hardware_xiaomi" path="hardware/xiaomi" remote="lineageos" revision="lineage-24.0" />
+  <project name="android_hardware_xiaomi" path="hardware/xiaomi" remote="lm-lineageos" revision="lineage-24.0" />
 
   <remove-project optional="true" path="hardware/dolby" />
-  <project name="hardware_dolby" path="hardware/dolby" remote="evoxdev" revision="cnb-aidl" />
+  <project name="hardware_dolby" path="hardware/dolby" remote="lm-evox" revision="cnb-aidl" />
 </manifest>
