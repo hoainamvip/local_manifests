@@ -30,4 +30,5 @@
 
   <remove-project optional="true" path="hardware/dolby" />
   <project name="hardware_dolby" path="hardware/dolby" remote="lm-evox" revision="cnb-aidl" />
+  <remove-project optional="true" path="packages/apps/DolbyAtmos" />
 </manifest>
