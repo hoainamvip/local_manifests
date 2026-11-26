@@ -7,7 +7,7 @@ Local manifest for building **LunarisAOSP** (Android 16) for the **Xiaomi 12S Pr
 **1. Clone this repo as your local manifests**
 
 ```bash
-git clone https://github.com/hoainamvip/local_manifests .repo/local_manifests
+git clone -b lunaris-16 https://github.com/hoainamvip/local_manifests .repo/local_manifests
 ```
 
 **2. Sync the source**
