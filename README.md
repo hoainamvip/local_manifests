@@ -25,7 +25,7 @@ repo init -u https://github.com/PixelOS-AOSP/android_manifest -b seventeen --git
 **2. Clone this repo as your local manifests**
 
 ```bash
-git clone https://github.com/hoainamvip/local_manifests .repo/local_manifests
+git clone -b a17-6.6 https://github.com/hoainamvip/local_manifests .repo/local_manifests
 ```
 
 **3. Sync the source**
