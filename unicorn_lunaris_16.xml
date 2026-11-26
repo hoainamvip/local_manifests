@@ -7,7 +7,7 @@
 
   <!-- Kernel 5.10 -->
   <remove-project optional="true" path="kernel/xiaomi/sm8450" />
-  <project name="android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="lm-los" revision="lineage-23.2" />
+  <project name="android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="lm-hoainamvip" revision="lineage-23.2" />
   <remove-project optional="true" path="kernel/xiaomi/sm8450-devicetrees" />
   <project name="android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="lm-los" revision="lineage-23.2" />
   <remove-project optional="true" path="kernel/xiaomi/sm8450-modules" />
@@ -17,7 +17,7 @@
   <remove-project optional="true" path="device/xiaomi/sm8450-common" />
   <project name="android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="lm-hoainamvip" revision="lineage-23.2" />
   <remove-project optional="true" path="device/xiaomi/unicorn" />
-  <project name="android_device_xiaomi_unicorn" path="device/xiaomi/unicorn" remote="lm-los" revision="lineage-23.2" />
+  <project name="android_device_xiaomi_unicorn" path="device/xiaomi/unicorn" remote="lm-hoainamvip" revision="lineage-23.2" />
 
   <!-- Vendor Blobs -->
   <remove-project optional="true" path="vendor/xiaomi/sm8450-common" />
