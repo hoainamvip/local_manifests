@@ -4,10 +4,12 @@
   <remote name="lm-hoainamvip" fetch="https://github.com/hoainamvip" />
   <remote name="lm-themuppets" fetch="https://github.com/TheMuppets" />
   <remote name="lm-ghosuto" fetch="https://github.com/Ghosuto" />
+  <remote name="lm-pershoot" fetch="https://github.com/pershoot" />
 
-  <!-- Kernel 5.10 -->
+  <!-- Kernel 5.10 + KernelSU-Next (pershoot dev-susfs) -->
   <remove-project optional="true" path="kernel/xiaomi/sm8450" />
   <project name="android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="lm-hoainamvip" revision="lineage-23.2" />
+  <project name="KernelSU-Next" path="kernel/xiaomi/sm8450/KernelSU-Next" remote="lm-pershoot" revision="dev-susfs" />
   <remove-project optional="true" path="kernel/xiaomi/sm8450-devicetrees" />
   <project name="android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="lm-los" revision="lineage-23.2" />
   <remove-project optional="true" path="kernel/xiaomi/sm8450-modules" />
