@@ -34,6 +34,7 @@
   <remove-project optional="true" path="hardware/dolby" />
   <project name="hardware_dolby" path="hardware/dolby" remote="lm-ghosuto" revision="16" />
 
-<!-- Leica Camera -->
-<project path="vendor/xiaomi/miuicamera-unicorn" name="hoainamvip/android_vendor_xiaomi_miuicamera-unicorn" remote="lm-hoainamvip" revision="lineage-23.2" sync-lfs="true" />
+ <!-- Leica Camera -->
+  <remove-project optional="true" path="vendor/xiaomi/miuicamera-unicorn" />
+  <project name="android_vendor_xiaomi_miuicamera-unicorn" path="vendor/xiaomi/miuicamera-unicorn" remote="lm-hoainamvip" revision="lineage-23.2" sync-lfs="true" />
 </manifest>
