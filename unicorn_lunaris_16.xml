@@ -19,7 +19,7 @@
   <remove-project optional="true" path="device/xiaomi/sm8450-common" />
   <project name="android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="lm-hoainamvip" revision="lineage-23.2" />
   <remove-project optional="true" path="device/xiaomi/unicorn" />
-  <project name="android_device_xiaomi_unicorn" path="device/xiaomi/unicorn" remote="lm-hoainamvip" revision="lineage-23.2" />
+  <project name="android_device_xiaomi_unicorn" path="device/xiaomi/unicorn" remote="lm-hoainamvip" revision="axion-16" />
 
   <!-- Vendor Blobs -->
   <remove-project optional="true" path="vendor/xiaomi/sm8450-common" />
